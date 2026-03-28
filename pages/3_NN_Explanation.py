@@ -7,6 +7,7 @@ st.title("Neural Network Model")
 st.header("1. Dataset Overview")
 st.markdown("""
 **California Housing Prices**
+- **Source**: StatLib repository / 1990 California Census (via Scikit-Learn `fetch_california_housing`).
 - **Task**: Predict the median house value for California districts (Regression).
 - **Features**: Includes median income, housing median age, total rooms, total bedrooms, population, households, latitude, and longitude.
 """)

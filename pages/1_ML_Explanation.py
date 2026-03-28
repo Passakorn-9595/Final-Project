@@ -7,7 +7,7 @@ st.title("Machine Learning Ensemble Model")
 st.header("1. Dataset Overview")
 st.markdown("""
 **Bank Marketing Dataset**
-- **Source**: UCI Machine Learning Repository
+- **Source**: [UCI Machine Learning Repository - Bank Marketing](https://archive.ics.uci.edu/dataset/222/bank+marketing)
 - **Task**: Predict whether a client will subscribe to a term deposit (binary classification).
 - **Features**: Includes age, job, marital status, education, default, balance, housing, loan, contact type, etc.
 """)
