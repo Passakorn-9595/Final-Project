@@ -2,7 +2,6 @@ pandas
 numpy
 scikit-learn
 torch
-streamlit
+streamlit>=1.38.0
 matplotlib
 seaborn
-altair<5.0.0
