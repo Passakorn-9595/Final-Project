@@ -5,3 +5,4 @@ torch
 streamlit
 matplotlib
 seaborn
+altair<5.0.0
