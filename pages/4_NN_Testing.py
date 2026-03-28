@@ -49,16 +49,16 @@ try:
     
     col1, col2 = st.columns(2)
     with col1:
-        med_inc = st.slider("Median Income (tens of thousands)", 0.5, 15.0, 3.8)
-        house_age = st.slider("House Median Age", 1.0, 52.0, 28.0)
-        ave_rooms = st.slider("Average Rooms", 1.0, 10.0, 5.4)
-        ave_bedrms = st.slider("Average Bedrooms", 0.5, 5.0, 1.0)
+        med_inc = st.number_input("Median Income (tens of thousands)", min_value=0.5, max_value=15.0, value=3.8, step=0.1)
+        house_age = st.number_input("House Median Age", min_value=1.0, max_value=52.0, value=28.0, step=1.0)
+        ave_rooms = st.number_input("Average Rooms", min_value=1.0, max_value=10.0, value=5.4, step=0.1)
+        ave_bedrms = st.number_input("Average Bedrooms", min_value=0.5, max_value=5.0, value=1.0, step=0.1)
     
     with col2:
-        population = st.slider("Population", 10.0, 10000.0, 1400.0)
-        ave_occup = st.slider("Average Occupancy", 1.0, 10.0, 3.0)
-        latitude = st.slider("Latitude", 32.0, 42.0, 35.6)
-        longitude = st.slider("Longitude", -124.0, -114.0, -119.5)
+        population = st.number_input("Population", min_value=10.0, max_value=10000.0, value=1400.0, step=10.0)
+        ave_occup = st.number_input("Average Occupancy", min_value=1.0, max_value=10.0, value=3.0, step=0.1)
+        latitude = st.number_input("Latitude", min_value=32.0, max_value=42.0, value=35.6, step=0.1)
+        longitude = st.number_input("Longitude", min_value=-124.0, max_value=-114.0, value=-119.5, step=0.1)
         
     if st.button("Predict House Value"):
         input_data = pd.DataFrame([[
