@@ -1,0 +1,54 @@
+# Intelligent System Final Project - Website Testing Guide
+
+This document provides exact, verified test cases to manually run the Machine Learning and Neural Network models on the deployed Streamlit web application.
+
+-----------------------------------------------------------
+1. Machine Learning Model (Bank Marketing Dataset)
+-----------------------------------------------------------
+Navigation: Go to the "ML Testing" page on the sidebar.
+
+Test Case A: Predicts "YES" (Client will subscribe)
+- Age: 56
+- Job: admin.
+- Yearly Balance: 45
+- Has Housing Loan?: no
+- Has Personal Loan?: no
+- Last Contact Duration (seconds): 1467
+Expected Outcome: The model will predict YES. (Notice the incredibly long phone call duration of 1467 seconds!)
+
+Test Case B: Predicts "NO" (Client will NOT subscribe)
+- Age: 58
+- Job: management
+- Yearly Balance: 2143
+- Has Housing Loan?: yes
+- Has Personal Loan?: no
+- Last Contact Duration (seconds): 261
+Expected Outcome: The model will predict NO.
+
+
+-----------------------------------------------------------
+2. Neural Network Model (California Housing Dataset)
+-----------------------------------------------------------
+Navigation: Go to the "NN Testing" page on the sidebar.
+
+Test Case A: Silicon Valley Luxury Home (High property value)
+- Median Income (tens of thousands): 12.5 
+- House Median Age: 15.0
+- Average Rooms: 7.5
+- Average Bedrooms: 1.2
+- Population: 800.0
+- Average Occupancy: 2.5
+- Latitude: 37.4 
+- Longitude: -122.1
+Expected Outcome: Very high predicted median house value, representing expensive coastal real estate.
+
+Test Case B: Inland Desert Home (Low property value)
+- Median Income (tens of thousands): 2.5
+- House Median Age: 45.0
+- Average Rooms: 4.0
+- Average Bedrooms: 1.5
+- Population: 2500.0
+- Average Occupancy: 4.5
+- Latitude: 34.8 
+- Longitude: -116.0
+Expected Outcome: Lower predicted median house value, indicating much cheaper inland housing.
