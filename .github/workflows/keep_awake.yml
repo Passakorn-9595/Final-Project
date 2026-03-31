@@ -2,7 +2,7 @@ name: Keep Streamlit App Awake
 
 on:
   schedule:
-    # Runs every 12 hours to prevent Streamlit from putting the app to sleep
+    # Runs every 12 hours to prevent Streamlit Community Cloud from putting the app to sleep
     - cron: '0 */12 * * *'
   # Allows you to trigger it manually from the Actions tab
   workflow_dispatch:
@@ -11,7 +11,19 @@ jobs:
   ping-app:
     runs-on: ubuntu-latest
     steps:
-      - name: Ping Streamlit App to keep it active
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Playwright
         run: |
-          curl -sS https://final-project-2vl3fcyz5qpc5mbhpfy26a.streamlit.app > /dev/null
-          echo "Successfully pinged the app to keep it awake!"
+          python -m pip install --upgrade pip
+          pip install playwright
+          playwright install chromium
+
+      - name: Ping Streamlit App to keep it active
+        run: python .github/workflows/wake_app.py
