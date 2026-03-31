@@ -20,3 +20,10 @@ Please use the sidebar to navigate to the detailed explanation and interactive t
 """)
 
 st.info("Developed for Project IS 2568.")
+
+st.markdown("---")
+st.markdown("### Team Members")
+st.markdown("""
+1. **6604062663248** นายภาสกร ปั้นกาญจนโต sec 5  
+2. **6604062663311** นายศุภณัฐ ลองจำนงค์ sec 5
+""")
