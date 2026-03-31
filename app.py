@@ -19,6 +19,4 @@ We have developed two models:
 Please use the sidebar to navigate to the detailed explanation and interactive testing pages for both models.
 """)
 
-st.info("Developed for Project IS 2568.
-         Member
-        ")
+st.info("Developed for Project IS 2568.")
